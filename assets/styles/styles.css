@@ -15,6 +15,8 @@
 nav {
   background-color: #00a2c6;
   padding: 5px;
+  position: sticky;
+  top: 0;
 }
 
 nav a {
@@ -50,6 +52,10 @@ main {
   max-height: 300px;
   object-fit: cover;
   object-position: center;
+}
+
+header {
+  display: inline;
 }
 
 h2 {
@@ -92,4 +98,12 @@ footer {
   background-color: #00a2c6;
   text-align: center;
   font-weight: bold;
+}
+
+@media screen and (max-width: 1000px) {
+  #content,
+  aside {
+    width: 100%;
+    padding: 0;
+  }
 }
