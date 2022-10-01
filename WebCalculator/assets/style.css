@@ -32,6 +32,10 @@ body {
   cursor: pointer;
 }
 
+.button:hover {
+  background: -webkit-linear-gradient(top, #8f8e8e, rgb(116, 114, 114));
+}
+
 .double {
   flex-basis: 50%;
 }
@@ -51,6 +55,12 @@ body {
   background: orange;
 }
 
+.operator:hover,
+.negative:hover,
+.equals:hover {
+  background: rgb(175, 114, 1);
+}
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
@@ -60,4 +70,10 @@ body {
 
 .button:hover {
   font-weight: bold;
+}
+
+@media screen and (max-width: 513px) {
+  .button {
+    padding: 10px;
+  }
 }
