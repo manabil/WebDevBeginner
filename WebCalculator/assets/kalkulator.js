@@ -82,8 +82,16 @@ for (const button of buttons) {
         let result = 0;
         if (calculator.operator === '+') {
           result = parseInt(calculator.firstNumber) + parseInt(calculator.displayNumber);
-        } else {
+        } else if (calculator.operator === '-') {
           result = parseInt(calculator.firstNumber) - parseInt(calculator.displayNumber);
+        } else if (calculator.operator === '*') {
+          result = parseInt(calculator.firstNumber) * parseInt(calculator.displayNumber);
+        } else if (calculator.operator === '/') {
+          result = parseInt(calculator.firstNumber) / parseInt(calculator.displayNumber);
+        } else if (calculator.operator === '(x)²') {
+          result = parseInt(calculator.firstNumber) ** 2;
+        } else if (calculator.operator === '%') {
+          result = parseInt(calculator.firstNumber) * (parseInt(calculator.displayNumber)/100);
         }
        
         calculator.displayNumber = result;
