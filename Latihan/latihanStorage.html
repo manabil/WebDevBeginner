@@ -2,44 +2,117 @@
 <html lang="en">
   <head>
     <title>Session Storage</title>
+    <style>
+      .session {
+        background-color: slategrey;
+        max-width: 500px;
+        max-height: 500px;
+        padding: 50px 50px;
+        margin: 20px auto;
+      }
+    </style>
   </head>
   <body>
-    <p>Anda sudah menekan tombol sebanyak <span id="count"></span> kali</p>
-    <button id="button">Click Disini!</button>
-    <p>Anda sudah menekan tombol sebanyak <span id="count2"></span> kali</p>
-    <button id="button2">Click Disini!</button>
+    <div class="session">
+      <h1>Session Storage</h1>
+      <p>
+        Anda sudah menekan tombol sebanyak
+        <span id="count_session_1"></span> kali
+      </p>
+      <button id="button_session_1">Click Disini!</button>
+      <p>
+        Anda sudah menekan tombol sebanyak
+        <span id="count_session_2"></span> kali
+      </p>
+      <button id="button_session_2">Click Disini!</button>
+    </div>
+
+    <div class="session">
+      <h1>Local Storage</h1>
+      <p>
+        Anda sudah menekan tombol sebanyak <span id="count_local_1"></span> kali
+      </p>
+      <button id="button_local_1">Click Disini!</button>
+      <button id="clear_local_1">Hapus Storage</button>
+      <p>
+        Anda sudah menekan tombol sebanyak <span id="count_local_2"></span> kali
+      </p>
+      <button id="button_local_2">Click Disini!</button>
+      <button id="clear_local_2">Hapus Storage</button>
+    </div>
 
     <script>
-      const cacheKey = "NUMBER";
-      const cacheKey2 = "NUMBER2";
+      const cacheKey_session_1 = "NUMBER_SESSION_1";
+      const cacheKey_session_2 = "NUMBER_SESSION_2";
+      const cacheKey_local_1 = "NUMBER_LOCAL_1";
+      const cacheKey_local_2 = "NUMBER_LOCAL_2";
+
       if (typeof Storage !== "undefined") {
         // pengecekkan apakah data sessionStorage dengan key NUMBER tersedia atau belum
-        if (sessionStorage.getItem(cacheKey) === "undefined") {
+        if (sessionStorage.getItem(cacheKey_session_1) === "undefined") {
           // Jika belum maka akan atur dengan nilai awal yakni 0
-          sessionStorage.setItem(cacheKey, 0);
-        } else if (sessionStorage.getItem(cacheKey2) === "undefined") {
+          sessionStorage.setItem(cacheKey_session_1, 0);
+        } else if (sessionStorage.getItem(cacheKey_session_2) === "undefined") {
           // Jika belum maka akan atur dengan nilai awal yakni 0
-          sessionStorage.setItem(cacheKey2, 0);
+          sessionStorage.setItem(cacheKey_session_2, 0);
+        } else if (localStorage.getItem(cacheKey_local_1) === "undefined") {
+          // Jika belum maka akan atur dengan nilai awal yakni 0
+          localStorage.setItem(cacheKey_local_1, 0);
+        } else if (localStorage.getItem(cacheKey_local_2) === "undefined") {
+          // Jika belum maka akan atur dengan nilai awal yakni 0
+          localStorage.setItem(cacheKey_local_2, 0);
         }
 
-        const button = document.querySelector("#button");
-        const count = document.querySelector("#count");
+        const button_session_1 = document.querySelector("#button_session_1");
+        const count_session_1 = document.querySelector("#count_session_1");
 
-        const button2 = document.querySelector("#button2");
-        const count2 = document.querySelector("#count2");
+        const button_session_2 = document.querySelector("#button_session_2");
+        const count_session_2 = document.querySelector("#count_session_2");
 
-        button.addEventListener("click", function (event) {
-          let number = sessionStorage.getItem(cacheKey);
+        const button_local_1 = document.querySelector("#button_local_1");
+        const count_local_1 = document.querySelector("#count_local_1");
+        const clear_local_1 = document.querySelector("#clear_local_1");
+
+        const button_local_2 = document.querySelector("#button_local_2");
+        const count_local_2 = document.querySelector("#count_local_2");
+        const clear_local_2 = document.querySelector("#clear_local_2");
+
+        button_session_1.addEventListener("click", function (event) {
+          let number = sessionStorage.getItem(cacheKey_session_1);
           number++;
-          sessionStorage.setItem(cacheKey, number);
-          count.innerText = sessionStorage.getItem(cacheKey);
+          sessionStorage.setItem(cacheKey_session_1, number);
+          count_session_1.innerText =
+            sessionStorage.getItem(cacheKey_session_1);
         });
 
-        button2.addEventListener("click", function (event) {
-          let number = sessionStorage.getItem(cacheKey2);
+        button_session_2.addEventListener("click", function (event) {
+          let number = sessionStorage.getItem(cacheKey_session_2);
           number++;
-          sessionStorage.setItem(cacheKey2, number);
-          count.innerText = sessionStorage.getItem(cacheKey2);
+          sessionStorage.setItem(cacheKey_session_2, number);
+          count_session_2.innerText =
+            sessionStorage.getItem(cacheKey_session_2);
+        });
+
+        button_local_1.addEventListener("click", function (event) {
+          let number = localStorage.getItem(cacheKey_local_1);
+          number++;
+          localStorage.setItem(cacheKey_local_1, number);
+          count_local_1.innerText = localStorage.getItem(cacheKey_local_1);
+        });
+
+        clear_local_1.addEventListener("click", function (event) {
+          localStorage.removeItem(cacheKey_local_1);
+        });
+
+        button_local_2.addEventListener("click", function (event) {
+          let number = localStorage.getItem(cacheKey_local_2);
+          number++;
+          localStorage.setItem(cacheKey_local_2, number);
+          count_local_2.innerText = localStorage.getItem(cacheKey_local_2);
+        });
+
+        clear_local_2.addEventListener("click", function (event) {
+          localStorage.removeItem(cacheKey_local_2);
         });
       } else {
         alert("Browser tidak mendukung Web Storage");
