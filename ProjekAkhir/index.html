@@ -1,131 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kok Error | Solusi Cari Bug Programmu</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="image/icon.png" />
+    <title>Cari Buk | Solusi Cari Bug Programmu</title>
+    <link rel="stylesheet" href="../ProjekAkhir/assets/styles/style.css" />
+    <link rel="icon" href="../ProjekAkhir/assets/images/icon.png" />
   </head>
   <body>
     <header>
-      <nav>
-        <input type="checkbox" id="check" />
-        <label for="check" class="checkBtn">
-          <img class="menuBtn" src="image/menu.svg" alt="menu" />
-        </label>
-        <label class="logo"
-          ><img class="image-logo" src="image/icon.png" alt="" />Kok Error
-          ?</label
-        >
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-          <li><a class="yukButton" href="#home">Yuk Tanya Errornya !</a></li>
-        </ul>
-      </nav>
+      <nav></nav>
     </header>
     <main>
-      <div id="content">
-        <!-- * HOME -->
-        <article class="container-flex background-theme" id="home">
-          <div class="col-50 col-kiri">
+      <div class="flex-row" id="home">
+        <div class="flex-content">
+          <article>
             <h1>Udah nyerah cari bug programmu tapi tetep nggak nemu ?</h1>
             <h3>
               Yuk coba tanyakan pada kami. Tanya langsung pada ahlinya tanpa ada
               batasan
             </h3>
-            <button>Yuk Tanya Errornya !</button>
+            <a href="" class="btn">Yuk Tanya Errornya !</a>
+          </article>
+          <article>
+            <img
+              src="../ProjekAkhir/assets/images/hero-img.png"
+              alt="image-main"
+            />
+          </article>
+        </div>
+      </div>
+      <div class="flex-row" id="feature">
+        <div class="flex-content col-dir pad0">
+          <div class="flex-header">
+            <h2 id="header-feature">Features</h2>
+            <h3>Mengapa memilih kami ?</h3>
           </div>
-          <div class="col-50 col-kanan">
-            <section>
-              <img id="image-utama" src="image/hero-img.png" alt="image-main" />
-            </section>
-          </div>
-        </article>
-
-        <!-- * FEATURES -->
-        <article
-          class="container-flex center-item background-theme-reverse row"
-          id="features"
-        >
-          <div class="heading-content">
-            <h5>
-              <section>Features</section>
-              <br />
-              Mengapa memilih kami ?
-            </h5>
-          </div>
-          <div class="container-flex">
-            <div class="card flex-grow kanan">
-              <img src="image/values-1.png" alt="features-image" />
-              <h4>Praktis dan Ekonomis</h4>
+          <div class="flex-card">
+            <div class="card">
+              <img src="../ProjekAkhir/assets/images/values-1.png" alt="" />
+              <h3>Praktis dan Ekonomis</h3>
               <p>
                 Dengan fitur upload media dan chat ahli kita dapat menyelesaikan
                 bug sesuai dengan kebutuhan
               </p>
             </div>
-            <div class="card flex-grow tengah">
-              <img src="image/values-2.png" alt="features-image" />
-              <h4>Cepat dan Mudah</h4>
+            <div class="card">
+              <img src="../ProjekAkhir/assets/images/values-2.png" alt="" />
+              <h3>Cepat dan Mudah</h3>
               <p>
                 Pelayanan dilayani oleh tenaga profesional sehingga terjamin
                 akan kecepatan dan kenyamanan pelayanan.
               </p>
             </div>
-            <div class="card flex-grow kiri">
-              <img src="image/values-3.png" alt="features-image" />
-              <h4>Lebih Efisien</h4>
+            <div class="card">
+              <img src="../ProjekAkhir/assets/images/values-3.png" alt="" />
+              <h3>Lebih Efisien</h3>
               <p>
                 Dengan menggunakan layanan ini dapat membantu permasalahan bug
                 program anda dengan cepat
               </p>
             </div>
           </div>
-        </article>
-
-        <!-- * CONTACT -->
-        <aside
-          class="container-flex background-theme-grad center-item row"
-          id="contact"
-        >
-          <div class="heading-content">
-            <h5>
-              <section>Contact</section>
-              <br />
-              About Me
-            </h5>
+        </div>
+      </div>
+      <div class="flex-row" id="contact">
+        <div class="flex-content col-dir pad0">
+          <div class="flex-header">
+            <h2 id="header-feature">Contact</h2>
+            <h3>About me</h3>
           </div>
-          <div class="container-flex" id="container-profile">
-            <div class="card profile">
-              <img class="profile" src="image/aku.jpg" alt="profile" />
-              <h4 class="profile">Muhammad Ammar Nabil</h4>
+          <div class="profile-card">
+            <img src="../ProjekAkhir/assets/images/aku.jpg" alt="" />
+            <div class="profile-header">
+              <h3>Muhammad Ammar Nabil</h3>
               <p>
                 Seseorang yang antusias akan ilmu baru dan habis itu cepat bosan
               </p>
-              <div class="container-flex center-item" id="sosmed">
+              <div class="profile-contact">
                 <a
-                  class="asosmed"
                   href="https://www.instagram.com/ammar__nabil/"
                   onclick="window.open(this.href); return false;"
-                  ><img class="sosmed" src="image/ig.png" alt=""
+                  ><img src="../ProjekAkhir/assets/images/ig.png" alt=""
                 /></a>
-                <a class="asosmed" href="https://wa.me/6285292085030"
-                  ><img class="sosmed" src="image/wa.png" alt=""
+                <a href="https://wa.me/6285292085030"
+                  ><img src="../ProjekAkhir/assets/images/wa.png" alt=""
                 /></a>
                 <a
-                  class="asosmed"
-                  href="https://github.com/pureism"
+                  href="https://github.com/manabil"
                   onclick="window.open(this.href); return false;"
-                  ><img class="sosmed" src="image/github.png" alt=""
+                  ><img src="../ProjekAkhir/assets/images/github.png" alt=""
                 /></a>
               </div>
             </div>
           </div>
-        </aside>
+        </div>
       </div>
+
+      <aside></aside>
     </main>
     <footer>
       <p>Belajar Dasar Pemrograman Web &#169; 2019, Dicoding Academy</p>
