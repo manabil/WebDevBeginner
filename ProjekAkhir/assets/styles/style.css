@@ -114,6 +114,11 @@ h3 {
   box-shadow: 5px 5px 10px grey;
   padding: 2em;
   width: 40vw;
+  transition: 0.25s;
+}
+
+.profile-card:hover {
+  transform: scale(1.025);
 }
 
 .card {
@@ -191,4 +196,430 @@ footer {
   color: #fff;
   text-align: center;
   font-size: 0.8em;
+}
+
+@media screen and (max-width: 1280px) {
+  .flex-row {
+    max-height: 100vh;
+    background-image: url("../images/hero-bg.png");
+    border: 1px solid black;
+  }
+
+  .flex-row#feature {
+    max-height: 300vh;
+    background-image: linear-gradient(#f2f5fc, white);
+    border: 1px solid black;
+  }
+
+  .flex-row#contact {
+    max-height: 100vh;
+    background-image: linear-gradient(white, #f2f5fc);
+    border: 1px solid black;
+  }
+
+  .flex-content {
+    display: flex;
+    flex-direction: column;
+    margin: 75px 10%;
+    padding: 50px 0;
+    border: 1px solid red;
+  }
+
+  .flex-content article {
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  article img#image-main {
+    display: none;
+  }
+
+  .pad0 {
+    padding: 0;
+  }
+
+  .col-dir {
+    flex-direction: column;
+  }
+
+  .flex-header {
+    border: 1px solid;
+    margin-bottom: 2em;
+  }
+
+  h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #263179;
+    text-align: center;
+    margin-bottom: 0.5em;
+    padding: 0 0 0 0;
+  }
+
+  h3 {
+    font-size: 1.25em;
+    font-weight: 100;
+    color: #444444;
+    margin: 0.5em 0 1.5em 0em;
+    padding: 0 20px 0 0;
+  }
+
+  .flex-header h2 {
+    font-size: 1.25em;
+    padding: 0.25em 0;
+    text-align: center;
+    color: #4154f1;
+  }
+
+  .flex-header h3 {
+    text-align: center;
+    font-weight: 700;
+    padding: 0 25px;
+    color: #263179;
+    margin: 0;
+  }
+
+  .btn {
+    text-decoration: none;
+    background: #4154f1;
+    padding: 0.6em 1.9em;
+    font-weight: normal;
+    border-radius: 6px;
+    color: white;
+    font-size: 1.3em;
+    transition: 0.5s;
+  }
+
+  .btn:hover {
+    background: #212b81;
+  }
+
+  .flex-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 10px;
+    flex-basis: 33.3%;
+    margin: 0 0 2em;
+    height: 65vh;
+    transition: 0.25s;
+    box-shadow: 5px 5px 10px grey;
+  }
+
+  .profile-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 10px;
+    flex-basis: 33.3%;
+    margin: 0 2.5em;
+    height: 65vh;
+    transition: 0.25s;
+    box-shadow: 5px 5px 10px grey;
+    padding: 2em;
+    align-items: center;
+    width: 100%;
+  }
+
+  .card:hover {
+    transform: scale(1.075);
+    box-shadow: 1px 1px 100px grey;
+  }
+
+  .card img {
+    width: 15em;
+    border: 1px solid;
+    margin: 20px 10px;
+  }
+
+  .card h3 {
+    font-weight: 700;
+    padding: 0 25px;
+    color: #263179;
+    margin: 0.5em 0 0;
+  }
+
+  .card p {
+    padding: 2em 2em;
+    text-align: center;
+  }
+
+  .profile-card img {
+    width: 14em;
+    height: 14em;
+    border-radius: 10em;
+    object-fit: cover;
+    margin: 0;
+    transition: 0.25s;
+  }
+
+  .profile-card img:hover {
+    transform: scale(1.25);
+    border-radius: 15px;
+    box-shadow: 1px 1px 100px grey;
+  }
+
+  .profile-contact {
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .profile-contact img {
+    width: 30px;
+    height: 30px;
+    margin: 0 20px 0 0;
+    margin: 0;
+    border-radius: 0.1px;
+  }
+
+  .profile-contact img:hover {
+    transform: scale(1.5);
+    box-shadow: 1px 1px 100px grey;
+    border-radius: 0;
+  }
+
+  .profile-header h3 {
+    margin: 1.5em 0;
+    padding: 0;
+    text-align: center;
+    font-weight: 700;
+    color: #263179;
+  }
+
+  footer {
+    position: relative;
+    bottom: 0;
+    margin: 3em 0 0 0;
+    width: 100%;
+    background: #263179;
+    padding: 10px 0em;
+    color: #fff;
+    text-align: center;
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .flex-row {
+    max-height: 100vh;
+    background-image: url("../images/hero-bg.png");
+    border: 1px solid black;
+  }
+
+  .flex-row#feature {
+    max-height: 300vh;
+    background-image: linear-gradient(#f2f5fc, white);
+    border: 1px solid black;
+  }
+
+  .flex-row#contact {
+    max-height: 100vh;
+    background-image: linear-gradient(white, #f2f5fc);
+    border: 1px solid black;
+  }
+
+  .flex-content {
+    display: flex;
+    flex-direction: column;
+    margin: 75px 10%;
+    padding: 50px 0;
+    border: 1px solid red;
+  }
+
+  .flex-content article {
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  article img#image-main {
+    display: none;
+  }
+
+  .pad0 {
+    padding: 0;
+  }
+
+  .col-dir {
+    flex-direction: column;
+  }
+
+  .flex-header {
+    border: 1px solid;
+    margin-bottom: 2em;
+  }
+
+  h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #263179;
+    text-align: center;
+    margin-bottom: 0.5em;
+    padding: 0 0 0 0;
+  }
+
+  h3 {
+    font-size: 1.25em;
+    font-weight: 100;
+    color: #444444;
+    margin: 0.5em 0 1.5em 0em;
+    padding: 0 20px 0 0;
+  }
+
+  .flex-header h2 {
+    font-size: 1.25em;
+    padding: 0.25em 0;
+    text-align: center;
+    color: #4154f1;
+  }
+
+  .flex-header h3 {
+    text-align: center;
+    font-weight: 700;
+    padding: 0 25px;
+    color: #263179;
+    margin: 0;
+  }
+
+  .btn {
+    text-decoration: none;
+    background: #4154f1;
+    padding: 0.6em 1.9em;
+    font-weight: normal;
+    border-radius: 6px;
+    color: white;
+    font-size: 1.3em;
+    transition: 0.5s;
+  }
+
+  .btn:hover {
+    background: #212b81;
+  }
+
+  .flex-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 10px;
+    flex-basis: 33.3%;
+    margin: 0 0 2em;
+    height: 65vh;
+    transition: 0.25s;
+    box-shadow: 5px 5px 10px grey;
+  }
+
+  .profile-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 10px;
+    flex-basis: 33.3%;
+    margin: 0 2.5em;
+    height: 65vh;
+    transition: 0.25s;
+    box-shadow: 5px 5px 10px grey;
+    padding: 2em;
+    align-items: center;
+    width: 100%;
+  }
+
+  .card:hover {
+    transform: scale(1.075);
+    box-shadow: 1px 1px 100px grey;
+  }
+
+  .card img {
+    width: 15em;
+    border: 1px solid;
+    margin: 20px 10px;
+  }
+
+  .card h3 {
+    font-weight: 700;
+    padding: 0 25px;
+    color: #263179;
+    margin: 0.5em 0 0;
+  }
+
+  .card p {
+    padding: 2em 2em;
+    text-align: center;
+  }
+
+  .profile-card img {
+    width: 14em;
+    height: 14em;
+    border-radius: 10em;
+    object-fit: cover;
+    margin: 0;
+    transition: 0.25s;
+  }
+
+  .profile-card img:hover {
+    transform: scale(1.25);
+    border-radius: 15px;
+    box-shadow: 1px 1px 100px grey;
+  }
+
+  .profile-contact {
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .profile-contact img {
+    width: 30px;
+    height: 30px;
+    margin: 0 20px 0 0;
+    margin: 0;
+    border-radius: 0.1px;
+  }
+
+  .profile-contact img:hover {
+    transform: scale(1.5);
+    box-shadow: 1px 1px 100px grey;
+    border-radius: 0;
+  }
+
+  .profile-header h3 {
+    margin: 1.5em 0;
+    padding: 0;
+    text-align: center;
+    font-weight: 700;
+    color: #263179;
+  }
+
+  footer {
+    position: relative;
+    bottom: 0;
+    margin: 3em 0 0 0;
+    width: 100%;
+    background: #263179;
+    padding: 10px 0em;
+    color: #fff;
+    text-align: center;
+    font-size: 0.8em;
+  }
 }
