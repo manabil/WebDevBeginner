@@ -309,7 +309,7 @@ footer {
     background-color: white;
     border: 1px solid;
     border-radius: 10px;
-    flex-basis: 33.3%;
+    flex-basis: 0;
     margin: 0 0 2em;
     height: 65vh;
     transition: 0.25s;
@@ -322,14 +322,14 @@ footer {
     background-color: white;
     border: 1px solid;
     border-radius: 10px;
-    flex-basis: 33.3%;
+    flex-basis: 0;
     margin: 0 2.5em;
     height: 65vh;
     transition: 0.25s;
     box-shadow: 5px 5px 10px grey;
     padding: 2em;
     align-items: center;
-    width: 100%;
+    width: 50%;
   }
 
   .card:hover {
@@ -356,9 +356,9 @@ footer {
   }
 
   .profile-card img {
-    width: 14em;
-    height: 14em;
-    border-radius: 10em;
+    width: 12em;
+    height: 12em;
+    border-radius: 6em;
     object-fit: cover;
     margin: 0;
     transition: 0.25s;
